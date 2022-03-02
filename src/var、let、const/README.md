@@ -174,8 +174,7 @@ let 和 const 声明的变量具有块级作用域的特点，这个不难实现
 
 ```js
 (function (__globalScope__) {
-  var __scope__ = {};
-  Object.setPrototypeOf(__scope__, __globalScope__);
+  var __scope__ = Object.create(__globalScope__)
 })(__scope__);
 ```
 
