@@ -42,7 +42,6 @@ for (var i = 0; i < __variable__.length; i++) {
 }
 
 /**
- *
  * 定义 const 实现
  *
  * 实现思路：
@@ -50,7 +49,6 @@ for (var i = 0; i < __variable__.length; i++) {
  * 常量需要在定义的时候初始化值，通过检查 arguments 的长度来判断实参的个数，对于没有初始化的常量抛出错误
  *
  * 常量在初始化后不允许重新赋值，利用 Object.defineProperty 定义常量的 set 方法，在重新赋值时抛出错误
- *
  */
 function __const__(key, value) {
   if (arguments.length === 1) {
@@ -70,11 +68,9 @@ function __const__(key, value) {
 }
 
 /**
- * 
  * 对于块级作用域，利用闭包来实现作用域的隔阂
  * 
  * 对于作用域链，可以利用原型链来实现相应的效果
- *
  */
 (function (__globalScope__) {
   var __scope__ = Object.create(__globalScope__)

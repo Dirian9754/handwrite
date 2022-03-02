@@ -41,9 +41,7 @@
  }
  
  /**
-  *
   * 定义 let 实现
-  *
   */
   function __let__(key, value) {
     return Object.defineProperty(__scope__, key, {
@@ -59,11 +57,9 @@
   }
  
  /**
-  * 
   * 对于块级作用域，利用闭包来实现作用域的隔阂
   * 
   * 对于作用域链，可以利用原型链来实现相应的效果
-  *
   */
  (function (__globalScope__) {
    var __scope__ = Object.create(__globalScope__)
